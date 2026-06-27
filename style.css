@@ -32,13 +32,59 @@ body {
     color: var(--dark);
     line-height: 1.7;
     overflow-x: hidden;
-    cursor: default;
 }
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+/* =============================================
+   TYPOGRAPHY
+   ============================================= */
+h1,
+h2,
+h3,
+.logo,
+.nav-links a,
+.btn {
+    font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: var(--dark);
+    line-height: 1.15;
+}
+
+.section-title span {
+    color: var(--gold);
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(201, 168, 76, 0.1);
+    padding: 4px 16px;
+    border-radius: 40px;
+    margin-bottom: 8px;
+    border: 1.5px solid rgba(201, 168, 76, 0.15);
+}
+
+.section-sub {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+    max-width: 500px;
+    margin-top: 4px;
 }
 
 /* =============================================
@@ -134,112 +180,6 @@ body {
     background: rgba(255, 255, 255, 0.8);
     border-color: var(--gold);
     box-shadow: 0 12px 48px rgba(27, 42, 74, 0.08), 0 0 30px rgba(201, 168, 76, 0.05);
-}
-
-/* =============================================
-   CLIENT LOGO MARQUEE
-   ============================================= */
-.clients {
-    padding: 60px 0 70px;
-    background: var(--cream);
-}
-
-.clients .section-sub {
-    margin-bottom: 32px;
-}
-
-.marquee-wrapper {
-    overflow: hidden;
-    position: relative;
-    padding: 20px 0;
-    border-top: 1px solid rgba(201, 168, 76, 0.08);
-    border-bottom: 1px solid rgba(201, 168, 76, 0.08);
-}
-
-.marquee-track {
-    display: flex;
-    gap: 60px;
-    animation: marqueeScroll 20s linear infinite;
-    width: max-content;
-}
-
-.marquee-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--navy);
-    white-space: nowrap;
-    padding: 0 10px;
-    opacity: 0.6;
-    transition: var(--transition);
-}
-
-.marquee-item i {
-    color: var(--gold);
-    font-size: 1.2rem;
-}
-
-.marquee-item:hover {
-    opacity: 1;
-    color: var(--gold);
-}
-
-@keyframes marqueeScroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* =============================================
-   TYPOGRAPHY
-   ============================================= */
-h1,
-h2,
-h3,
-.logo,
-.nav-links a,
-.btn {
-    font-family: 'Inter', sans-serif;
-}
-
-.section-title {
-    font-size: 2.4rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-    color: var(--dark);
-    line-height: 1.15;
-}
-
-.section-title span {
-    color: var(--gold);
-}
-
-.section-tag {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold);
-    background: rgba(201, 168, 76, 0.1);
-    padding: 4px 16px;
-    border-radius: 40px;
-    margin-bottom: 8px;
-    border: 1.5px solid rgba(201, 168, 76, 0.15);
-}
-
-.section-sub {
-    font-size: 1rem;
-    color: var(--text-light);
-    font-weight: 400;
-    max-width: 500px;
-    margin-top: 4px;
 }
 
 /* =============================================
@@ -969,7 +909,66 @@ h3,
 }
 
 /* =============================================
-   TESTIMONIALS
+   CLIENT LOGO MARQUEE
+   ============================================= */
+.clients {
+    padding: 60px 0 70px;
+    background: var(--cream);
+}
+
+.clients .section-sub {
+    margin-bottom: 32px;
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    border-top: 1px solid rgba(201, 168, 76, 0.08);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 60px;
+    animation: marqueeScroll 20s linear infinite;
+    width: max-content;
+}
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--navy);
+    white-space: nowrap;
+    padding: 0 10px;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.marquee-item i {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.marquee-item:hover {
+    opacity: 1;
+    color: var(--gold);
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* =============================================
+   TESTIMONIALS CAROUSEL
    ============================================= */
 .testimonials {
     padding: 60px 0 70px;
