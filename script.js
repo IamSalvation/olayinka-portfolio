@@ -52,7 +52,7 @@ if (navToggle && navLinks) {
 // SMOOTH SCROLL
 // ============================================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         if (targetId && targetId !== '#') {
             const target = document.querySelector(targetId);
@@ -273,10 +273,14 @@ function createCarousel(trackId, prevId, nextId, dotsId) {
         }
     }
 
-    if (prevBtn) prevBtn.addEventListener('click', () => { goToPrev();
-        resetAutoSlide(); });
-    if (nextBtn) nextBtn.addEventListener('click', () => { goToNext();
-        resetAutoSlide(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+        goToPrev();
+        resetAutoSlide();
+    });
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+        goToNext();
+        resetAutoSlide();
+    });
 
     let resizeTimeout;
     window.addEventListener('resize', () => {
@@ -302,7 +306,7 @@ createCarousel('testimonialTrack', 'testimonialPrev', 'testimonialNext', 'testim
 // ============================================
 const form = document.getElementById('contactForm');
 if (form) {
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         if (this.action.includes('YOUR_FORMSPREE_ID')) {
             e.preventDefault();
             const btn = this.querySelector('.btn-submit');
